@@ -4,7 +4,7 @@ that indicates what the button does when the user selects it.
 */
 
 use winapi::um::winuser::{WS_VISIBLE, WS_DISABLED};
-use winapi::um::commctrl::{PBS_MARQUEE, PBS_VERTICAL};
+use winapi::um::commctrl::{PBS_MARQUEE, PBS_VERTICAL, PBS_SMOOTH, PBS_SMOOTHREVERSE};
 use crate::win32::window_helper as wh;
 use crate::win32::base_helper::check_hwnd;
 use crate::NwgError;
@@ -21,6 +21,8 @@ bitflags! {
         const DISABLED = WS_DISABLED;
         const VERTICAL = PBS_VERTICAL;
         const MARQUEE = PBS_MARQUEE;
+        const SMOOTH = PBS_SMOOTH;
+        const SMOOTHREVERSE = PBS_SMOOTHREVERSE;
     }
 }
 
